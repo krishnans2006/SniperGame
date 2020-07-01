@@ -1,5 +1,6 @@
 import pygame
 
+
 class Person:
     def __init__(self, x, y, img):
         self.x = x
