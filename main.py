@@ -16,3 +16,13 @@ bg = pygame.image.load() # will be filled in
 character = pygame.image.load() # will be filled in
 
 KILLS = 0
+
+
+def redraw(win):
+    pygame.display.flip()
+
+
+def main():
+    while True:
+        redraw(win)
+        clock.tick(30)
