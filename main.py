@@ -19,6 +19,7 @@ KILLS = 0
 
 
 def redraw(win):
+    win.blit(bg, (0, 0))
     pygame.display.flip()
 
 
