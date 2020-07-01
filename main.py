@@ -26,7 +26,8 @@ def main():
     music = pygame.mixer.music.load("music.mp3")
     pygame.mixer.music.set_volume(40)
     pygame.mixer.music.play(-1)
-    time.sleep(5)
+    while pygame.mixer.music.get_busy():
+        time.sleep(1)
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
