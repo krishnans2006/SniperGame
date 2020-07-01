@@ -10,10 +10,11 @@ pygame.display.set_caption("Scarlett Inferno")
 clock = pygame.time.Clock()
 
 music = pygame.mixer.music.load("music.mp3")
+pygame.mixer.music.set_volume(100)
 pygame.mixer.music.play(-1)
 
 bg = pygame.image.load("sniper_bg.jpg")
-person_img = pygame.image.load() # will be filled in
+# person_img = pygame.image.load() # will be filled in
 
 KILLS = 0
 
@@ -27,5 +28,4 @@ def main():
     while True:
         redraw(win)
         clock.tick(30)
-
 main()
