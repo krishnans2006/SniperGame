@@ -2,6 +2,7 @@ import pygame
 
 pygame.init()
 pygame.font.init()
+pygame.mixer.init()
 
 W = 800
 H = 600
