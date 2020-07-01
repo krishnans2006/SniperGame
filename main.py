@@ -1,7 +1,9 @@
 import pygame
+import time
 pygame.init()
 pygame.font.init()
 pygame.mixer.init()
+time.sleep()
 
 W = 800
 H = 600
