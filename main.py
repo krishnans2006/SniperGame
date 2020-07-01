@@ -9,7 +9,7 @@ pygame.display.set_caption("Scarlett Inferno")
 clock = pygame.time.Clock()
 
 bg = pygame.image.load("sniper_bg.jpg")
-playerImg = pygame.image.load("")
+playerImg = pygame.image.load("player.png")
 person_img = pygame.image.load() # will be filled in
 
 KILLS = 0
