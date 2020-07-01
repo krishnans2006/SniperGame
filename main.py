@@ -1,9 +1,9 @@
 import pygame
 import time
+
 pygame.init()
 pygame.font.init()
 pygame.mixer.init()
-time.sleep()
 
 W = 800
 H = 600
@@ -26,6 +26,7 @@ def main():
     music = pygame.mixer.music.load("music.mp3")
     pygame.mixer.music.set_volume(40)
     pygame.mixer.music.play(-1)
+    time.sleep(5)
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
