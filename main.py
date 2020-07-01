@@ -12,8 +12,8 @@ clock = pygame.time.Clock()
 music = pygame.mixer.music.load() # will be filled in
 pygame.mixer.music.play(-1)
 
-bg = pygame.image.load() # will be filled in
-character = pygame.image.load() # will be filled in
+bg = pygame.image.load("sniper_bg.jpg")
+person_img = pygame.image.load() # will be filled in
 
 KILLS = 0
 
