@@ -26,3 +26,5 @@ def main():
     while True:
         redraw(win)
         clock.tick(30)
+
+main()
