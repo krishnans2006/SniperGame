@@ -12,14 +12,16 @@ bg = pygame.image.load("sniper_bg.jpg")
 bg_pos = [0, 0]
 move_speed = 8
 
-playerImg = pygame.image.load("player.png")
-# person_img = pygame.image.load()
+player_img = pygame.image.load("player.png")
+person_img = pygame.image.load("person.png")
 
 KILLS = 0
 
 
 def redraw(win):
     win.blit(bg, bg_pos)
+    win.blit(player_img, (300, H - player_img.get_height()))
+    win.blit(person_img, (50, 50))
     pygame.display.flip()
 
 
