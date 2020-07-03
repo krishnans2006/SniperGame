@@ -1,4 +1,9 @@
+import random
+
 import pygame
+from pygame.locals import *
+
+from classes import Person
 
 pygame.init()
 pygame.font.init()
@@ -18,6 +23,7 @@ player_img = pygame.image.load("player.png")
 person_img = pygame.image.load("person.png")
 persons = []
 KILLS = 0
+pygame.time.set_timer(USEREVENT + 1, 3000)
 
 
 def shoot(x, y, persons):
@@ -43,6 +49,12 @@ def main():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 quit()
+            if event.type == USEREVENT + 1:
+                x = random.randint(0, bg.get_width())
+                y = random.randint(0, bg.get_height())
+                persons.append(Person(x, y, person_img))
+                print("New person added at (x,y)")
+
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT]:
             if bg_pos[0] < 0:
