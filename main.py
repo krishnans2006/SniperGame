@@ -7,6 +7,7 @@ H = 600
 win = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("Scarlett Inferno")
 clock = pygame.time.Clock()
+font = pygame.font.SysFont("timesnewroman", 30)
 
 bg = pygame.image.load("sniper_bg.jpg")
 bg_pos = [0, 0]
