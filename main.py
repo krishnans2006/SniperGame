@@ -35,13 +35,17 @@ def main():
                 quit()
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT]:
-            bg_pos[0] += move_speed
+            if bg_pos[0] < 0:
+                bg_pos[0] += move_speed
         if keys[pygame.K_RIGHT]:
-            bg_pos[0] -= move_speed
+            if bg_pos[0] > (bg.get_width() - W) * -1:
+                bg_pos[0] -= move_speed
         if keys[pygame.K_UP]:
-            bg_pos[1] += move_speed
+            if bg_pos[1] < 0:
+                bg_pos[1] += move_speed
         if keys[pygame.K_DOWN]:
-            bg_pos[1] -= move_speed
+            if bg_pos[1] > (bg.get_height() - H) * -1:
+                bg_pos[1] -= move_speed
         redraw(win)
         clock.tick(30)
 
