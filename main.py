@@ -7,7 +7,7 @@ H = 600
 win = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("Scarlett Inferno")
 clock = pygame.time.Clock()
-font = pygame.font.SysFont("timesnewroman", 30)
+font = pygame.font.SysFont("timesnewroman", 30, True)
 
 bg = pygame.image.load("sniper_bg.jpg")
 bg_pos = [0, 0]
@@ -23,6 +23,7 @@ def redraw(win):
     win.blit(bg, bg_pos)
     win.blit(player_img, (300, H - player_img.get_height()))
     win.blit(person_img, (50, 50))
+    win.blit(font.render(f"Kills: {KILLS}", 1, (255, 255, 255)), (10, 10))
     pygame.display.flip()
 
 
