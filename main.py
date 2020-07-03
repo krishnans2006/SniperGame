@@ -67,7 +67,7 @@ def main():
             if bg_pos[1] > (bg.get_height() - H) * -1:
                 bg_pos[1] -= move_speed
         if keys[pygame.K_SPACE]:
-            shoot(500, 325, persons)
+            shoot(abs(bg_pos[0]) + 388, abs(bg_pos[1]) + 445, persons)
         redraw(win, persons)
         clock.tick(30)
 
