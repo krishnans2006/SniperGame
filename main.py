@@ -25,7 +25,6 @@ def redraw(win):
     win.blit(person_img, (50, 50))
     pygame.display.flip()
 
-
 def main():
     global bg_pos
     while True:
